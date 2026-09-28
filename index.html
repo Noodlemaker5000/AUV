@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AUV Project</title>
+  <meta name="description" content="An autonomous underwater vehicle project: design, build progress, and specs.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">AUV</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#specs">Specs</a>
+        <a href="#progress">Progress</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Autonomous Underwater Vehicle</p>
+        <h1>Exploring below the surface, on its own.</h1>
+        <p class="lead">A small, open project to design and build an underwater robot that can navigate, sense its surroundings, and complete missions without a tether.</p>
+        <div class="actions">
+          <a class="btn primary" href="#progress">See progress</a>
+          <a class="btn" href="https://github.com/Noodlemaker5000/AUV">View on GitHub</a>
+        </div>
+      </div>
+      <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,64 C240,112 480,16 720,48 C960,80 1200,112 1440,64 L1440,120 L0,120 Z"></path>
+      </svg>
+    </section>
+
+    <section id="about" class="wrap section">
+      <h2>About the project</h2>
+      <p>An AUV is a robot submarine that runs a mission by itself: no pilot, no cable. This project covers the full stack, from the pressure hull and thrusters to the electronics, sensors, and the software that decides where to go next.</p>
+      <p>The goal is a vehicle that can dive, hold depth and heading, follow a planned route, and surface with the data it collected.</p>
+    </section>
+
+    <section id="features" class="section alt">
+      <div class="wrap">
+        <h2>Key features</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🧭</div>
+            <h3>Autonomous navigation</h3>
+            <p>Follows waypoints using an IMU, depth sensor, and dead reckoning.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">⚙️</div>
+            <h3>Vectored thrusters</h3>
+            <p>Multiple thrusters for control over depth, heading, and pitch.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">📷</div>
+            <h3>Onboard sensing</h3>
+            <p>Camera and environmental sensors log data throughout each dive.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔋</div>
+            <h3>Untethered power</h3>
+            <p>Battery pack sized for missions of useful length.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs" class="wrap section">
+      <h2>Specifications</h2>
+      <p class="muted">Target values. These will be updated as the build progresses.</p>
+      <table class="specs">
+        <tbody>
+          <tr><th scope="row">Length</th><td>TBD</td></tr>
+          <tr><th scope="row">Weight</th><td>TBD</td></tr>
+          <tr><th scope="row">Max depth</th><td>TBD</td></tr>
+          <tr><th scope="row">Endurance</th><td>TBD</td></tr>
+          <tr><th scope="row">Thrusters</th><td>TBD</td></tr>
+          <tr><th scope="row">Computer</th><td>TBD</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="progress" class="section alt">
+      <div class="wrap">
+        <h2>Build progress</h2>
+        <ol class="timeline">
+          <li class="done">
+            <h3>Project started</h3>
+            <p>Repository created and goals defined.</p>
+          </li>
+          <li>
+            <h3>Hull and frame design</h3>
+            <p>Choose hull material, size, and sealing approach.</p>
+          </li>
+          <li>
+            <h3>Electronics and power</h3>
+            <p>Select controller, sensors, and battery; wire and bench-test.</p>
+          </li>
+          <li>
+            <h3>Control software</h3>
+            <p>Depth and heading hold, then waypoint navigation.</p>
+          </li>
+          <li>
+            <h3>Pool testing</h3>
+            <p>Leak tests, tuning, and first autonomous runs.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap section">
+      <h2>Get in touch</h2>
+      <p>Questions or ideas? Open an issue on the <a href="https://github.com/Noodlemaker5000/AUV/issues">GitHub repository</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year"></span> AUV Project</div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
