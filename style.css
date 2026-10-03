@@ -190,6 +190,12 @@ p { margin: 0 0 16px; }
 .people span { color: rgba(232,244,251,.65); }
 .people a { color: var(--cyan); text-decoration: none; word-break: break-all; }
 
+button.btn { font-family: inherit; cursor: pointer; }
+.email-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+.email-menu[hidden] { display: none; }
+.email-menu a, .email-menu button { font: 500 14px var(--body); color: #fff; text-decoration: none; padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); cursor: pointer; transition: background .2s; }
+.email-menu a:hover, .email-menu button:hover { background: rgba(76,201,240,.2); border-color: var(--cyan); }
+
 /* Footer */
 .footer { background: var(--abyss); color: rgba(220,236,248,.55); font-size: 14px; padding: 28px 0; }
 .foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }

@@ -221,8 +221,14 @@
         <h2>Let's build something together.</h2>
         <p>Operators, industry partners and engineers: we'd love to talk. Our software and simulator are public, so feel free to look before you reach out.</p>
         <div class="actions">
-          <a class="btn" href="mailto:jia.tsen23@imperial.ac.uk">Email the team</a>
+          <button class="btn" id="email-btn" type="button" aria-expanded="false" aria-controls="email-menu">Email the team</button>
           <a class="btn btn-ghost" href="https://github.com/ICAUV/auv1-software">github.com/ICAUV ↗</a>
+        </div>
+        <div class="email-menu" id="email-menu" hidden>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jia.tsen23@imperial.ac.uk,charles.hung24@imperial.ac.uk&amp;su=Hello%20ICAUV" target="_blank" rel="noopener">Open in Gmail</a>
+          <a href="https://outlook.office.com/mail/deeplink/compose?to=jia.tsen23@imperial.ac.uk;charles.hung24@imperial.ac.uk&amp;subject=Hello%20ICAUV" target="_blank" rel="noopener">Open in Outlook</a>
+          <a href="mailto:jia.tsen23@imperial.ac.uk,charles.hung24@imperial.ac.uk?subject=Hello%20ICAUV">Open mail app</a>
+          <button type="button" id="email-copy">Copy email addresses</button>
         </div>
         <div class="people">
           <div><strong>Nicholas Tsen</strong><span>Co-founder</span><a href="mailto:jia.tsen23@imperial.ac.uk">jia.tsen23@imperial.ac.uk</a></div>
@@ -251,6 +257,19 @@
       }), { rootMargin: '0px 0px -8% 0px' });
       document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     }
+    const emailBtn = document.getElementById('email-btn');
+    const emailMenu = document.getElementById('email-menu');
+    emailBtn.addEventListener('click', () => {
+      emailMenu.hidden = !emailMenu.hidden;
+      emailBtn.setAttribute('aria-expanded', String(!emailMenu.hidden));
+    });
+    const copyBtn = document.getElementById('email-copy');
+    copyBtn.addEventListener('click', async () => {
+      const text = 'jia.tsen23@imperial.ac.uk, charles.hung24@imperial.ac.uk';
+      try { await navigator.clipboard.writeText(text); copyBtn.textContent = 'Copied!'; }
+      catch { copyBtn.textContent = text; }
+      setTimeout(() => { copyBtn.textContent = 'Copy email addresses'; }, 2500);
+    });
   </script>
 </body>
 </html>
