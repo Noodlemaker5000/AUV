@@ -170,9 +170,11 @@ p { margin: 0 0 16px; }
 .partner:hover { transform: translateY(-4px); border-color: #b9d6ea; box-shadow: 0 24px 50px -28px rgba(10,37,64,.4); }
 .partner .logo { height: 96px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line); margin-bottom: 22px; padding-bottom: 22px; }
 .partner .logo img { max-height: 40px; max-width: 80%; width: auto; }
-.partner p { margin: 0; }
+.partner { align-items: center; text-align: center; }
+.partner .logo { width: 100%; }
+.partner p { margin: 0; font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--ink); }
+.partner > span { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--sea); margin-top: 4px; }
 .wordmark { font-family: var(--display); color: var(--navy); }
-.wordmark.oshen { font-size: 40px; font-weight: 600; letter-spacing: -.03em; }
 .wordmark.rs { font-size: 34px; font-weight: 700; color: #fff; background: var(--navy); padding: 4px 14px; border-radius: 6px; letter-spacing: .02em; }
 @media (max-width: 860px) { .partners { grid-template-columns: 1fr; } }
 
