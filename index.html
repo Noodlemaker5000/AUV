@@ -42,7 +42,7 @@
       <div class="wrap hero-content">
         <p class="eyebrow reveal">Autonomous underwater vehicles · London</p>
         <h1 class="reveal">Autonomous robots for the infrastructure beneath the waves.</h1>
-        <p class="lead reveal">We design and build underwater vehicles to inspect, monitor and help maintain subsea cables, pipelines and offshore structures, without a crewed vessel on station.</p>
+        <p class="lead reveal">We design and build low-cost underwater vehicles to inspect and maintain subsea infrastructure, serve as an open platform for hardware and software research, and work together as swarms.</p>
         <div class="actions reveal">
           <a class="btn" href="#stack">Explore the stack</a>
           <a class="btn btn-ghost" href="https://github.com/ICAUV/auv1-software">View our code ↗</a>
@@ -77,33 +77,48 @@
       </div>
     </section>
 
-    <!-- COMMERCIAL FOCUS -->
+    <!-- WHAT WE'RE BUILDING TOWARDS -->
     <section id="focus" class="section deep">
       <div class="wrap">
         <div class="head reveal">
           <p class="kicker">What we're building towards</p>
-          <h2>Persistent, autonomous care for subsea infrastructure.</h2>
-          <p class="sub">Cables, pipelines and offshore wind foundations are critical, ageing and hard to reach. Today they're mostly inspected by divers or tethered ROVs launched from expensive crewed vessels. Small autonomous vehicles can do that work more often, more safely and at lower cost.</p>
+          <h2>One low-cost platform. Many missions.</h2>
+          <p class="sub">Subsea infrastructure is critical, ageing and hard to reach, and today it's mostly inspected by divers or tethered ROVs launched from expensive crewed vessels. We're building small, affordable vehicles that can take on that work, double as an open platform for research, and scale up into cooperating swarms.</p>
         </div>
-        <div class="cards three">
+
+        <figure class="swarm reveal">
+          <canvas id="swarm" aria-label="Animation of a swarm of small underwater vehicles moving together above a seabed pipeline and sharing data" role="img"></canvas>
+          <figcaption>
+            <span class="live"><i></i>Swarm autonomy</span>
+            Several vehicles sharing data to survey more ground, faster than any one vehicle could.
+          </figcaption>
+        </figure>
+
+        <div class="cards four">
           <article class="card reveal">
             <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
-            <h3>Inspect</h3>
-            <p>Survey assets on a schedule, capture imagery and sensor data, and flag corrosion, scour, damage or burial changes early.</p>
+            <h3>Inspect &amp; maintain</h3>
+            <p>Survey cables, pipelines and foundations on a schedule, flag corrosion, scour and damage early, and work towards light intervention by the vehicle itself.</p>
           </article>
           <article class="card reveal">
-            <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
-            <h3>Monitor</h3>
-            <p>Track the condition of assets and the environment around them over time, so operators move from reacting to failures to predicting them.</p>
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/><path d="M7.5 15h9"/></svg></div>
+            <h3>Research platform</h3>
+            <p>Modular sealed canisters and an open software stack make AUV1 a testbed: swap in new sensors, thrusters or autonomy code and get real data back.</p>
           </article>
           <article class="card reveal">
-            <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
-            <h3>Maintain</h3>
-            <p>Our long-term goal is light intervention: cleaning, close-up checks and sensor servicing carried out by the vehicle itself.</p>
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 6.5c-.8-1.5-2.7-2.5-5-2.5-2.8 0-5 1.5-5 3.7 0 5 10 2.6 10 7.6 0 2.2-2.2 3.7-5 3.7-2.3 0-4.3-1-5-2.6"/></svg></div>
+            <h3>Lower cost</h3>
+            <p>3D-printed structure, off-the-shelf electronics and no support vessel on station bring underwater data within reach of far more operators and labs.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24"><circle cx="5" cy="7" r="2"/><circle cx="19" cy="7" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 7h10M6 9l5 7.5M18 9l-5 7.5"/></svg></div>
+            <h3>Swarm</h3>
+            <p>Many small vehicles and shore nodes working together: wider coverage, built-in redundancy, and missions no single vehicle could run.</p>
           </article>
         </div>
+
         <div class="assets reveal">
-          <span>Subsea power &amp; data cables</span><span>Oil, gas &amp; CO₂ pipelines</span><span>Offshore wind foundations</span><span>Ports &amp; harbour structures</span><span>Aquaculture sites</span>
+          <span>Subsea power &amp; data cables</span><span>Pipelines</span><span>Offshore wind foundations</span><span>Ports &amp; harbours</span><span>Ocean &amp; environmental research</span><span>Marine robotics R&amp;D</span>
         </div>
       </div>
     </section>
@@ -271,5 +286,6 @@
       setTimeout(() => { copyBtn.textContent = 'Copy email addresses'; }, 2500);
     });
   </script>
+  <script src="swarm.js" defer></script>
 </body>
 </html>
