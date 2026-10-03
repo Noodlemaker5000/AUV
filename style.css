@@ -174,8 +174,7 @@ p { margin: 0 0 16px; }
 .partner .logo { width: 100%; }
 .partner p { margin: 0; font-family: var(--display); font-weight: 600; font-size: 17px; color: var(--ink); }
 .partner > span { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--sea); margin-top: 4px; }
-.wordmark { font-family: var(--display); color: var(--navy); }
-.wordmark.rs { font-size: 34px; font-weight: 700; color: #fff; background: var(--navy); padding: 4px 14px; border-radius: 6px; letter-spacing: .02em; }
+.partner .logo img.square { max-height: 60px; border-radius: 4px; }
 @media (max-width: 860px) { .partners { grid-template-columns: 1fr; } }
 
 /* CTA */
