@@ -3,128 +3,256 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AUV Project</title>
-  <meta name="description" content="An autonomous underwater vehicle project: design, build progress, and specs.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+  <title>ICAUV · Autonomous Underwater Vehicles</title>
+  <meta name="description" content="A small team of Imperial engineering students building autonomous underwater vehicles for the monitoring and maintenance of underwater infrastructure.">
+  <meta property="og:title" content="ICAUV · Autonomous Underwater Vehicles">
+  <meta property="og:description" content="Autonomous robots for the infrastructure beneath the waves.">
+  <meta property="og:image" content="assets/img/auv1-bench.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a2540'/><path d='M12 34c6-8 34-8 40 0-6 8-34 8-40 0z' fill='%234cc9f0'/><circle cx='44' cy='34' r='3' fill='%230a2540'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="nav">
+
+  <header class="nav" id="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">AUV</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#specs">Specs</a>
-        <a href="#progress">Progress</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="#top" aria-label="ICAUV home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14"/><path d="M12 34c6-8 34-8 40 0-6 8-34 8-40 0z"/><circle cx="44" cy="34" r="3"/></svg>
+        ICAUV
+      </a>
+      <nav class="links">
+        <a href="#who">Who we are</a>
+        <a href="#focus">Focus</a>
+        <a href="#stack">Stack</a>
+        <a href="#now">Now</a>
+        <a href="#partners">Partners</a>
       </nav>
+      <a class="btn btn-sm" href="#contact">Get in touch</a>
     </div>
   </header>
 
   <main id="top">
+
+    <!-- HERO -->
     <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow">Autonomous Underwater Vehicle</p>
-        <h1>Exploring below the surface, on its own.</h1>
-        <p class="lead">A small, open project to design and build an underwater robot that can navigate, sense its surroundings, and complete missions without a tether.</p>
-        <div class="actions">
-          <a class="btn primary" href="#progress">See progress</a>
-          <a class="btn" href="https://github.com/Noodlemaker5000/AUV">View on GitHub</a>
+      <img class="hero-bg" src="assets/img/auv1-bench.jpg" alt="">
+      <div class="hero-shade"></div>
+      <div class="wrap hero-content">
+        <p class="eyebrow reveal">Autonomous underwater vehicles · London</p>
+        <h1 class="reveal">Autonomous robots for the infrastructure beneath the waves.</h1>
+        <p class="lead reveal">We design and build underwater vehicles to inspect, monitor and help maintain subsea cables, pipelines and offshore structures, without a crewed vessel on station.</p>
+        <div class="actions reveal">
+          <a class="btn" href="#stack">Explore the stack</a>
+          <a class="btn btn-ghost" href="https://github.com/ICAUV/auv1-software">View our code ↗</a>
         </div>
       </div>
-      <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,64 C240,112 480,16 720,48 C960,80 1200,112 1440,64 L1440,120 L0,120 Z"></path>
-      </svg>
+      <div class="hero-stats wrap">
+        <div class="stat"><span>2026</span>Founded</div>
+        <div class="stat"><span>AUV1</span>In build</div>
+        <div class="stat"><span>6-DOF</span>Simulator</div>
+        <div class="stat"><span>Open</span>Software stack</div>
+      </div>
     </section>
 
-    <section id="about" class="wrap section">
-      <h2>About the project</h2>
-      <p>An AUV is a robot submarine that runs a mission by itself: no pilot, no cable. This project covers the full stack, from the pressure hull and thrusters to the electronics, sensors, and the software that decides where to go next.</p>
-      <p>The goal is a vehicle that can dive, hold depth and heading, follow a planned route, and surface with the data it collected.</p>
-    </section>
-
-    <section id="features" class="section alt">
-      <div class="wrap">
-        <h2>Key features</h2>
-        <div class="grid">
-          <article class="card">
-            <div class="icon" aria-hidden="true">🧭</div>
-            <h3>Autonomous navigation</h3>
-            <p>Follows waypoints using an IMU, depth sensor, and dead reckoning.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">⚙️</div>
-            <h3>Vectored thrusters</h3>
-            <p>Multiple thrusters for control over depth, heading, and pitch.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">📷</div>
-            <h3>Onboard sensing</h3>
-            <p>Camera and environmental sensors log data throughout each dive.</p>
-          </article>
-          <article class="card">
-            <div class="icon" aria-hidden="true">🔋</div>
-            <h3>Untethered power</h3>
-            <p>Battery pack sized for missions of useful length.</p>
-          </article>
+    <!-- WHO WE ARE -->
+    <section id="who" class="section">
+      <div class="wrap split">
+        <div class="reveal">
+          <p class="kicker">Who we are</p>
+          <h2>A small team of students building from first principles.</h2>
+          <p>We are engineering students at Imperial College London working across mechanical design, power and propulsion, electronics, software and autonomy. Every part of our first vehicle, AUV1, has been designed, printed, wired and assembled by the team.</p>
+          <p>Marine robotics is almost absent from UK engineering degrees, despite how much of our energy and data now runs under the sea. We started ICAUV to change that, and to build technology that matters offshore.</p>
+          <ul class="ticks">
+            <li>Five specialist engineering streams, one vehicle</li>
+            <li>Weekly engineering cycles with versioned design reviews</li>
+            <li>Full software stack and simulator published in the open</li>
+          </ul>
+        </div>
+        <div class="collage reveal">
+          <img class="c1" src="assets/img/team.jpg" alt="The ICAUV team at Imperial College London" loading="lazy">
+          <img class="c2" src="assets/img/stall-banner.jpg" alt="The team showing AUV1 at the ICAUV stand" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section id="specs" class="wrap section">
-      <h2>Specifications</h2>
-      <p class="muted">Target values. These will be updated as the build progresses.</p>
-      <table class="specs">
-        <tbody>
-          <tr><th scope="row">Length</th><td>TBD</td></tr>
-          <tr><th scope="row">Weight</th><td>TBD</td></tr>
-          <tr><th scope="row">Max depth</th><td>TBD</td></tr>
-          <tr><th scope="row">Endurance</th><td>TBD</td></tr>
-          <tr><th scope="row">Thrusters</th><td>TBD</td></tr>
-          <tr><th scope="row">Computer</th><td>TBD</td></tr>
-        </tbody>
-      </table>
+    <!-- COMMERCIAL FOCUS -->
+    <section id="focus" class="section deep">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="kicker">What we're building towards</p>
+          <h2>Persistent, autonomous care for subsea infrastructure.</h2>
+          <p class="sub">Cables, pipelines and offshore wind foundations are critical, ageing and hard to reach. Today they're mostly inspected by divers or tethered ROVs launched from expensive crewed vessels. Small autonomous vehicles can do that work more often, more safely and at lower cost.</p>
+        </div>
+        <div class="cards three">
+          <article class="card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+            <h3>Inspect</h3>
+            <p>Survey assets on a schedule, capture imagery and sensor data, and flag corrosion, scour, damage or burial changes early.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+            <h3>Monitor</h3>
+            <p>Track the condition of assets and the environment around them over time, so operators move from reacting to failures to predicting them.</p>
+          </article>
+          <article class="card reveal">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
+            <h3>Maintain</h3>
+            <p>Our long-term goal is light intervention: cleaning, close-up checks and sensor servicing carried out by the vehicle itself.</p>
+          </article>
+        </div>
+        <div class="assets reveal">
+          <span>Subsea power &amp; data cables</span><span>Oil, gas &amp; CO₂ pipelines</span><span>Offshore wind foundations</span><span>Ports &amp; harbour structures</span><span>Aquaculture sites</span>
+        </div>
+      </div>
     </section>
 
-    <section id="progress" class="section alt">
+    <!-- STACK -->
+    <section id="stack" class="section">
       <div class="wrap">
-        <h2>Build progress</h2>
-        <ol class="timeline">
-          <li class="done">
-            <h3>Project started</h3>
-            <p>Repository created and goals defined.</p>
-          </li>
-          <li>
-            <h3>Hull and frame design</h3>
-            <p>Choose hull material, size, and sealing approach.</p>
-          </li>
-          <li>
-            <h3>Electronics and power</h3>
-            <p>Select controller, sensors, and battery; wire and bench-test.</p>
-          </li>
-          <li>
-            <h3>Control software</h3>
-            <p>Depth and heading hold, then waypoint navigation.</p>
-          </li>
-          <li>
-            <h3>Pool testing</h3>
-            <p>Leak tests, tuning, and first autonomous runs.</p>
-          </li>
+        <div class="head reveal">
+          <p class="kicker">The stack</p>
+          <h2>AUV1: modular hardware, open software.</h2>
+          <p class="sub">A slender, sectioned vehicle built around independently sealed canisters on a shared chassis, so any section can be opened or swapped without touching the rest. It's designed to evolve rather than be rebuilt.</p>
+        </div>
+
+        <figure class="render reveal">
+          <img src="assets/img/cad-side.png" alt="CAD render of AUV1 showing internal canisters, fins and propulsor" loading="lazy">
+        </figure>
+
+        <div class="specs reveal">
+          <div><dt>Configuration</dt><dd>Torpedo body, sectioned pressure hull on a common chassis</dd></div>
+          <div><dt>Propulsion</dt><dd>Shrouded main propulsor plus lateral bow tunnel thruster</dd></div>
+          <div><dt>Control surfaces</dt><dd>Four independent stern fins, cruciform layout</dd></div>
+          <div><dt>Depth</dt><dd>Pitch-and-drive; buoyancy engine planned for static hold</dd></div>
+          <div><dt>Sensing</dt><dd>Depth, inertial, leak and environmental probes. DVL, acoustic positioning and imaging next</dd></div>
+          <div><dt>Comms &amp; power</dt><dd>Fibre-optic tether; onboard 21700 lithium-ion pack</dd></div>
+        </div>
+
+        <div class="layers">
+          <article class="layer reveal">
+            <img src="assets/img/layout-topdown.jpg" alt="AUV1 laid out: hull sections, electronics tray and battery" loading="lazy">
+            <div>
+              <p class="tag">Hardware</p>
+              <h3>Sealed where it matters</h3>
+              <p>Electronics live only in sealed canisters inside a free-flooded printed structure. The main aluminium canister doubles as a heat sink for the motor controllers.</p>
+            </div>
+          </article>
+          <article class="layer reveal">
+            <img src="assets/img/bench-2.jpg" alt="Fin servos under closed-loop control on the bench" loading="lazy">
+            <div>
+              <p class="tag">Control</p>
+              <h3>Our own mixer, our own loops</h3>
+              <p>A flight controller handles sensors, arming, telemetry and failsafes; a companion computer runs the mission. Fin mixing, PID loops and the depth-to-pitch cascade are protocol-free, so they can be unit-tested without hardware.</p>
+            </div>
+          </article>
+          <article class="layer reveal">
+            <img src="assets/img/simulator.jpg" alt="AUV1 pool simulator showing true track against dead-reckoned estimate" loading="lazy">
+            <div>
+              <p class="tag">Simulation</p>
+              <h3>A six-degree-of-freedom twin</h3>
+              <p>Our own dynamics model has added mass, quadratic drag, fin lift, thruster lag and realistic sensor noise. It runs through the same interface as the real vehicle, so a mission script runs unchanged in simulation or in the water.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOW -->
+    <section id="now" class="section deep">
+      <div class="wrap">
+        <div class="head reveal">
+          <p class="kicker">What we're working on now</p>
+          <h2>Design done. Hardware in build. Next: water.</h2>
+          <p class="sub">Hull modules are printed, the first canister is assembled with its dome endcap and seals, and power and control electronics are under test on the bench.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="g-wide reveal"><img src="assets/img/stall-team.jpg" alt="The team with AUV1 opened up to show its internals" loading="lazy"><figcaption>AUV1 internals: power distribution and control electronics</figcaption></figure>
+          <figure class="reveal"><img src="assets/img/build-hull.jpg" alt="First hull section with dome endcap" loading="lazy"><figcaption>First hull section, dome endcap and O-ring seals</figcaption></figure>
+          <figure class="reveal"><img src="assets/img/build-print.jpg" alt="Printed hull modules" loading="lazy"><figcaption>Hull modules straight off the printer</figcaption></figure>
+          <figure class="reveal"><img src="assets/img/build-electronics.jpg" alt="Electronics integration on the bench" loading="lazy"><figcaption>Electronics integration and power validation</figcaption></figure>
+          <figure class="reveal"><img src="assets/img/build-parts.jpg" alt="Components received and logged" loading="lazy"><figcaption>Components received and logged</figcaption></figure>
+        </div>
+
+        <div class="next reveal">
+          <h3>First wet trials</h3>
+          <p>Float and ballast trim, seal and pressure verification, then measuring the hydrodynamic coefficients our simulator currently estimates: drag from straight-line runs, added mass and damping from free-decay tests, fin lift from step inputs.</p>
+        </div>
+
+        <ol class="roadmap reveal">
+          <li class="done"><span class="when">2026</span><strong>Foundation</strong><span>Team formed, design goals set, funding secured</span></li>
+          <li class="done"><span class="when">2026</span><strong>Design &amp; simulation</strong><span>CAD, schematics, software stack and 6-DOF simulator</span></li>
+          <li class="active"><span class="when">Jun 26 – Feb 27</span><strong>Prototype build</strong><span>Hull fabrication, electronics, first tethered control</span></li>
+          <li><span class="when">Nov 26 – Apr 27</span><strong>Testing &amp; tuning</strong><span>Wet trials, hydrodynamic characterisation, initial autonomy</span></li>
+          <li><span class="when">Apr 27 →</span><strong>Full autonomy</strong><span>Untethered navigation; RoboSub and SAUVC</span></li>
         </ol>
       </div>
     </section>
 
-    <section id="contact" class="wrap section">
-      <h2>Get in touch</h2>
-      <p>Questions or ideas? Open an issue on the <a href="https://github.com/Noodlemaker5000/AUV/issues">GitHub repository</a>.</p>
+    <!-- PARTNERS -->
+    <section id="partners" class="section">
+      <div class="wrap">
+        <div class="head center reveal">
+          <p class="kicker">Partnerships</p>
+          <h2>Backed by people who know the water.</h2>
+        </div>
+        <div class="partners">
+          <a class="partner reveal" href="https://www.imperial.ac.uk" target="_blank" rel="noopener">
+            <div class="logo"><img src="assets/logos/imperial-navy.png" alt="Imperial College London"></div>
+            <p>Our home. Imperial College London provides the engineering community, facilities and expertise we build on.</p>
+          </a>
+          <a class="partner reveal" href="https://oshen.co" target="_blank" rel="noopener">
+            <!-- To use the official logo: save it as assets/logos/oshen.svg (or .png) and replace the span below with <img src="assets/logos/oshen.svg" alt="Oshen"> -->
+            <div class="logo"><span class="wordmark oshen">oshen</span></div>
+            <p>Our ocean-robotics partner. Oshen builds fleets of small autonomous ocean robots that collect data in some of the harshest conditions at sea.</p>
+          </a>
+          <a class="partner reveal" href="https://www.rs-online.com" target="_blank" rel="noopener">
+            <!-- To use the official logo: save it as assets/logos/rs.svg (or .png) and replace the span below with <img src="assets/logos/rs.svg" alt="RS"> -->
+            <div class="logo"><span class="wordmark rs">RS</span></div>
+            <p>Through the RS Student Fund, RS supports the power, control and sensing hardware at the heart of AUV1.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="cta">
+      <div class="wrap cta-inner reveal">
+        <h2>Let's build something together.</h2>
+        <p>Operators, industry partners and engineers: we'd love to talk. Our software and simulator are public, so feel free to look before you reach out.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:jia.tsen23@imperial.ac.uk">Email the team</a>
+          <a class="btn btn-ghost" href="https://github.com/ICAUV/auv1-software">github.com/ICAUV ↗</a>
+        </div>
+        <div class="people">
+          <div><strong>Nicholas Tsen</strong><span>Co-founder</span><a href="mailto:jia.tsen23@imperial.ac.uk">jia.tsen23@imperial.ac.uk</a></div>
+          <div><strong>Charles Hung</strong><span>Co-founder · Head Engineer</span><a href="mailto:charles.hung24@imperial.ac.uk">charles.hung24@imperial.ac.uk</a></div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap">© <span id="year"></span> AUV Project</div>
+    <div class="wrap foot">
+      <span>© <span id="year">2026</span> ICAUV · London, UK</span>
+      <img src="assets/logos/imperial-white.png" alt="Imperial College London">
+    </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+    if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('anim');
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    }
+  </script>
 </body>
 </html>
